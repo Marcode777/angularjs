@@ -21,11 +21,31 @@
     <hr>
     <h1>Hello, you must be {{yourName}}</h1> 
   </div> -->
-  <div ng-controller="TodoCtrl">
-  <h2> Total todos: {{totalTodos}}</h2>
-  <ul class="unstyled">
-    <li ng-repeat>
-      {{todo.text}}
-    </li>
-  </ul>
+  <div ng-controller="TodoCtrl"> <!-- this is the controller, which will be in a js file, it's named the exact same way as in the js file, "TodoCtrl" in this example-->
+    <!-- <h2> Total todos: {{totalTodos}}</h2> --> <!-- through the magic of binding, which are the double curly braces {{}}, this will populate with whatever is defined with this in the controller (js) file,-->
+    <!--now we've changed it to getTotalTodos so everytime you add something new, it will update the total value, this is because we can use binding to the function as well-->
+    <h2>Total todos: {{getTotalTodos()}}</h2>
+    <ul class="unstyled">
+      <li ng-repeat="todo in todos"> <!--since the best way to go through a list is to loop through them, the magic of ng-repeat is used
+      also, so we are looping through the todos that are in the array in the js file
+      be aware of the syntax of singular in plural, which in this case is todo in todos-->
+        <!-- {{todo.text}} --> <!-- this is what is done via binding, in this case we are binding text from the js file , which will magically show up in the html page-->
+        <input type="checkbox" ng-model="todo.done"> <!-- we're making this a little more useful by setting up an input with a type of checkbox and then use an ng-model directive that's set to equal todo.done
+        this is a two-way binding between the html page and the controller 
+        once the checkbox is clicked, it will set the current todo that is looped through to done, and then show the actual todo.text, in this case, in the span, which won't show much bc when it's clicked nothing happens
+        remember ng-model achieves two-way binding-->
+       <!--  <span>{{todo.text}}</span> -->
+       <span class="done-{{todo.done}}">{{todo.text}}</span>
+       <!-- buf it the style of this is set by doing a class called "done" and binding the todo.done property to it via  class="done-{{todo.done}}", so it's actually binding to the todo.done property inside of the style, in this case, a property called done:true is implemented in the css of angulajs.css, so now when it's done, it will get a text-decoration of line-through and grays them out when the boxes are checked, simply because it's updating, anytime the checkboxes are clicked, because we set the todo-done of the current item in the todos array and we're toggling it between true and false, whatever the value of the checkbox input is-->
+      </li> 
+    </ul>
+    <form class="form-horizontal">
+      <input type="text" ng-model="formTodoText" ng-model-instant>
+      <!-- this form now is for adding to the todo list, ng-model is for two-way binding, ng-model-instant is to instantly update via the ng-model-instant and {{formTodoText}} in the curly brackets-->
+     <!--  {{formTodoText}}  --><!-- so anything typed in the form will instantly update which will be useful for the button of the next part-->
+      <button class="btn" ng-click="addTodo()">Add</button> <!--ng-click is the action for the click, the action for the click is set up in the js file via addTodo-->
+    </form>
+    <button class="btn-large" ng-click="clearCompleted()">Clear Completed</button>
+
   </div>
+</body>
