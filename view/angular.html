@@ -4,7 +4,7 @@
   <title>ANGULARJS</title>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js" ></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <script type="text/javascript" src="controller/angularjs.js"></script>
+  <script type="text/javascript" src="../controller/angularjs.js"></script>
   <link rel="stylesheet" type="text/css" href="angularjs.css">
 
 </head>
@@ -19,8 +19,8 @@
     <h1>Hello, you must be {{yourName}}</h1> 
   </div>
   <h2>Todo</h2>
-  <div ng-controller="TodoListController as todoList">
-    <span>{{todoList.remaining()}} of {{todoList.todos.length}} remaining</span>
+  <div ng-controller="TodoCtrl">
+    {{totalTodos}}
   </div>
 
 
