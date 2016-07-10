@@ -3,11 +3,14 @@
 <head>
   <title>ANGULARJS</title>
   <script type="text/javascript" src="http://code.angularjs.org/angular-1.0.0rc3.min.js" ></script> <!-- this angular source code was from a video example from the angular official site, because the actual source code on the official angular site homepage did not work for some reason, which was this src"https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js".-->
-  <script type="text/javascript" src="http://documentcloud.github.com/underscore/underscore-min.js"></script> <!-- this code was also taken from the video of the official angular site and not the code from the official angular site's homepage because for some reason it also did not work-->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  <!--<script type="text/javascript" src="http://documentcloud.github.com/underscore/underscore-min.js"></script>--> <!-- this code was also taken from the video of the official angular site and not the code from the official angular site's homepage because for some reason it also did not work-->
   <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-  okay, it seems like this version does work, but it only works with the simple example for the basics tutorial on the angular official site homepage, so the bottom line is that they do work, but they can only one version of them can be loaded once, which makes sense-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  okay, it seems like this version does work, but it only works with the simple example for the basics tutorial on the angular official site homepage, so the bottom line is that they do work, but only one version of them can be loaded once, which makes sense-->
+  <!-- found the reason why the clear complete function for the clear complete button was not working, it's because http://documentcloud.github.com/underscore/underscore-min.js was throwing a 404 error and was not found
+  now thanks to jshapiro, a new link shall be used https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js-->
   <script type="text/javascript" src="../controller/angularjs.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="angularjs.css">
 
 </head>
