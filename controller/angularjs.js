@@ -21,9 +21,9 @@ function TodoCtrl($scope){// here, it's named the exact same way as in the html 
   $scope.addTodo = function(){ // this entire block is the function for the action when you click on the ng-click to add an item
     $scope.todos.push({text:$scope.formTodoText, done:false});
     $scope.formTodoText = ''; //this clears out the text form after you add an item
-}
+  }
 
-  $scope.clearCompleted = function(){ // this clears out the completed items and only returns as a result the items that not done
+  $scope.clearCompleted = function(){ // this clears out the completed items and only returns as a result the items that are not done
     $scope.todos = _.filter($scope.todos, function(todo){
       return !todo.done;
     })
