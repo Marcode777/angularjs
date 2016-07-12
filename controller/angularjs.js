@@ -1,3 +1,5 @@
+TweenMax.from(".angularjs", 5, {x:-600, rotation:360});
+
 function TodoCtrl($scope){// here, it's named the exact same way as in the html file, "TdoCtrl" in this example
   // $scope.totalTodos = 7; // through the magic of binding, which are the double curly braces {{}}, this will appear on the html page
 
@@ -29,3 +31,5 @@ function TodoCtrl($scope){// here, it's named the exact same way as in the html 
     })
   };
 };
+
+

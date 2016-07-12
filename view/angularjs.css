@@ -1,8 +1,16 @@
 body {
-  background-color: #cce6ff;
+  background-color: white;
 }
 
+.jumbotron{
+  background-color: #cce6ff;
+}
 .done-true {
   text-decoration: line-through;
   color: gray;
 }
+
+.angularjs{
+  position: relative;
+}
+
