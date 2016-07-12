@@ -8,15 +8,16 @@
   <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
   okay, it seems like this version does work, but it only works with the simple example for the basics tutorial on the angular official site homepage, so the bottom line is that they do work, but only one version of them can be loaded once, which makes sense-->
   <!-- found the reason why the clear complete function for the clear complete button was not working, it's because http://documentcloud.github.com/underscore/underscore-min.js was throwing a 404 error and was not found
-  now thanks to jshapiro, a new link shall be used https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js-->
-  <script type="text/javascript" src="../controller/angularjs.js"></script>
+  now thanks to jshapiro, a new link shall be used https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js, this is for the .filter function in the controller, which is the js file-->
+  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="angularjs.css">
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script> <!--to get TweenMax to work, it has to be loaded before the other main js file, in this case, ../controller/angularjs.js which also has to now be on towards the bottom of the body instead of at the head-->
 </head>
+
 <body>
   <div class ="jumbotron">
-    <h1 align="center">ANGULARJS</h1>
+    <h1 align="center" class="angularjs">ANGULARJS</h1>
   </div>
   <!-- <div>
     <label>Name:</label>
@@ -49,6 +50,6 @@
       <button class="btn" ng-click="addTodo()">Add</button> <!--ng-click is the action for the click, the action for the click is set up in the js file via addTodo-->
     </form>
     <button class="btn-large" ng-click="clearCompleted()">Clear Completed</button>
-
   </div>
+  <script type="text/javascript" src="../controller/angularjs.js"></script>
 </body>
